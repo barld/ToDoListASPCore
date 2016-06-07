@@ -14,6 +14,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
+    <ApplicationInsightsResourceId>/subscriptions/3ed3f7b0-9208-40b8-aefc-5d9500fb2115/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/ToDoListAplication</ApplicationInsightsResourceId>
   </PropertyGroup>
   <ItemGroup>
     <DnxInvisibleContent Include="bower.json" />
