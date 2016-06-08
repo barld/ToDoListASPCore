@@ -243,3 +243,5 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/src/ToDoListAplication/Properties/PublishProfiles/barld - Web Deploy.pubxml
+/src/ToDoListAplication/Properties/PublishProfiles/barld - Web Deploy-publish.ps1
