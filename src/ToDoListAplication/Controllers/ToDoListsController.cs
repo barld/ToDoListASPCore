@@ -110,14 +110,15 @@ namespace ToDoListAplication.Controllers
                         .Where(t => newTaks.Exists(nt => nt.Id == t.Id)).ToList();
                     tasks.ForEach(t =>
                         {
-                            var newtask = newTaks.Find(nt => nt.Id == nt.Id);
+                            var newtask = newTaks.Find(nt => nt.Id == t.Id);
                             t.Done = newtask.Done;
                             t.Task = newtask.Task;
                             //_context.Entry(t).State = EntityState.Modified;
                             //_context.Update(t);
                         }
                     );
-                    origenal.Tasks = tasks.ToList();
+                    newTaks.Where(nt => !tasks.Exists(t => t.Id == nt.Id)).ToList().ForEach(nt => tasks.Add(nt));
+                    origenal.Tasks = tasks;
 
 
                     try
